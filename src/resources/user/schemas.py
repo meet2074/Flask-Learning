@@ -7,9 +7,3 @@ class CreateUser(BaseModel):
     mobile_number: int
     email: EmailStr
 
-
-class UpdateUser(BaseModel):
-    first_name: str | None
-    last_name: str | None
-    mobile_number: int | None
-    email: EmailStr | None

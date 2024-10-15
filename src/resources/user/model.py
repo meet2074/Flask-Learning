@@ -1,9 +1,5 @@
-from flask_sqlalchemy import SQLAlchemy
 import uuid
-# from flask import Flask
-
-# app = Flask(__name__)
-db = SQLAlchemy()
+from database.database import db
 
 class User(db.Model):
     id = db.Column(db.String,primary_key=True,default=str(uuid.uuid4()))
@@ -11,4 +7,3 @@ class User(db.Model):
     last_name = db.Column(db.String(80),unique=False,nullable=False)
     mobile_number=db.Column(db.Integer,unique=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    
